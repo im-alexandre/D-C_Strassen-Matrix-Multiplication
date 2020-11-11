@@ -8,6 +8,8 @@ int **matrix_A;
 int **matrix_B;
 int **result_matrix;
 
+void Config();
+
 void Menu1()
 {
 	system("clear");
@@ -23,7 +25,7 @@ void Menu1()
 	switch(entrada)
 	{
 		case 1:
-			//Config();
+			Config();
 			break;
 
 		case 2:
@@ -57,7 +59,6 @@ void Menu2()
 	}
 
 }
-
 
 void allocMatrixes()
 {
@@ -98,4 +99,37 @@ void printMatrix(int **M)
 	}
 	printf("\n");	
 	
+}
+
+
+void Config()
+{
+	system("clear");
+	printf("Qual será o tamanho N da matriz N x N?\n");
+	printf("(Pela limitação de espaço gráfico, a visualiação das matrizes\ne de seus resultados só estão disponíveis para valores de N <= 10)\n\n>> ");
+	
+	scanf("%d", &size);
+	
+	printf("\nSerá gerada uma matriz %d x %d de inteiros aleatórios...\n", size, size);
+
+	allocMatrixes();
+	sleep(3);
+
+	system("clear");
+
+	if(size <= 10)
+	{
+		//system("clear");
+		printf("Matrizes Geradas\n\n");
+		printf("Matriz A\n");
+		printMatrix(matrix_A);
+		printf("Matriz B\n");
+		printMatrix(matrix_B);
+	}
+	else
+	{
+
+	}
+
+	printf("Aperte Enter para prosseguir...\n");
 }
