@@ -9,6 +9,7 @@ int **matrix_B;
 int **result_matrix;
 
 void Config();
+int determinantOfMatrix(int **mat, int n);
 
 void Menu1()
 {
@@ -101,11 +102,10 @@ void printMatrix(int **M)
 	
 }
 
-
 void Config()
 {
 	system("clear");
-	printf("Qual será o tamanho N da matriz N x N?\n");
+	printf("Qual será o tamanho N da matriz N x N?\n\n");
 	printf("(Pela limitação de espaço gráfico, a visualiação das matrizes\ne de seus resultados só estão disponíveis para valores de N <= 10)\n\n>> ");
 	
 	scanf("%d", &size);
@@ -119,17 +119,20 @@ void Config()
 
 	if(size <= 10)
 	{
-		//system("clear");
 		printf("Matrizes Geradas\n\n");
-		printf("Matriz A\n");
+		printf("Matriz A\n\n");
 		printMatrix(matrix_A);
-		printf("Matriz B\n");
+		printf("Matriz B\n\n");
 		printMatrix(matrix_B);
 	}
 	else
 	{
-
+		printf("Dada o tamanho da matriz, será apresentado somente o elemento na posição [0,0]\n\n");
+		printf("Matriz A = %d\n"  , matrix_A[0][0]);
+		printf("Matriz B = %d\n\n", matrix_B[0][0]);
 	}
 
 	printf("Aperte Enter para prosseguir...\n");
+	getchar();
+	getchar();
 }
