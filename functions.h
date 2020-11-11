@@ -1,5 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include <unistd.h>
+
+int size; // Tamanho da matriz
+int **matrix_A;
+int **matrix_B;
+int **result_matrix;
 
 void Menu1()
 {
@@ -26,7 +33,6 @@ void Menu1()
 
 }
 
-
 void Menu2()
 {
 	system("clear");
@@ -50,6 +56,46 @@ void Menu2()
 			break;
 	}
 
+}
 
 
+void allocMatrixes()
+{
+	//// Matrix A ////
+	matrix_A = (int **) malloc(size * sizeof(int *));
+	for(int i = 0; i < size; i++)
+		matrix_A[i] = (int *) malloc(size * sizeof(int));
+
+	srand(time(0));
+
+	for(int l = 0; l < size; l++)
+		for(int c = 0; c < size; c++)
+			matrix_A[l][c] = rand()%31;
+
+	//// Matrix B ////
+	matrix_B = (int **) malloc(size * sizeof(int *));
+	for(int i = 0; i < size; i++)
+		matrix_B[i] = (int *) malloc(size * sizeof(int));
+
+
+	for(int l = 0; l < size; l++)
+		for(int c = 0; c < size; c++)
+			matrix_B[l][c] = rand()%31;
+
+	//// Result Matrix ////
+	result_matrix = (int **) malloc(size * sizeof(int *));
+	for(int i = 0; i < size; i++)
+		result_matrix[i] = (int *) malloc(size * sizeof(int));
+}
+
+void printMatrix(int **M)
+{
+	for(int l = 0; l < size; l++) {
+		for(int c = 0; c < size; c++) {
+			printf("%d ", M[l][c]);
+		}
+		printf("\n");
+	}
+	printf("\n");	
+	
 }
