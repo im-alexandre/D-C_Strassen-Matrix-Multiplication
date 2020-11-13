@@ -6,7 +6,7 @@
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| 18/0022962  |  Lus Guilherme Gaboardi Lins |
+| 18/0022962  |  Luís Guilherme Gaboardi Lins |
 
 ## Sobre
 Dadas duas matrizes quadradas A e B de dimensão n x n, a multiplicação entre elas A*B (ou B*A) utilizando o procedimento padrão nos dá uma complexidade de O(N³).
@@ -47,7 +47,7 @@ Para executar:
 
 ## Uso
 
-1. ReadMe e instruções de execução:- 
+1. ReadMe e instruções de execução: https://youtu.be/hvzmG2zFdXw
 
 
 
