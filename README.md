@@ -31,14 +31,14 @@ Compilador GCC, ambiente capaz de executar arquivos .c
 No terminal, escolha o local no qual a pasta será instalada e execute:
 
 1. `git clone https://github.com/projeto-de-algoritmos/D-C_Strassen-Matrix-Multiplication.git`
-2. `cd Greed_Knapsack-Problem`
+2. `cd D-C_Strassen-Matrix-Multiplication`
 
 Ou
 
 1. Faça o download do projeto zipado a partir do GitHub
 2. Descompacte a pasta no destino _path_ escolhido
 3. Utilizado o terminal, acesse o local onde a pasta foi descompactada
-4. `cd path/D-C_Matrix-Multiplication
+4. `cd path/D-C_Strassen-Matrix-Multiplication
 
 Para executar:
 
